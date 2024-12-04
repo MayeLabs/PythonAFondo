@@ -1,3 +1,4 @@
+import time
 
 def iniciales(cadena, sep=' '):
     """ Devuelve las iniciales concatenadas en mayusculas de la cadena que esta separadas por " "
@@ -36,14 +37,23 @@ def division(num, deno=1):
 def permu(num:int, veces:float) -> float:
     """ Calcula el producto de un número y una cantidad de veces.
 
-    Parámetros:
     :params num: int -  El número que se va a multiplicar.
     :params veces: float - La cantidad de veces con la que se multiplicará el número.
-    :return float- Resultado de multiplicar num por veces.
+    :return float: Resultado de multiplicar num por veces.
     """
     return num * veces
 
+# El caracter '/' indica:
+# Los parametros desde el comienzo se usan solamente posicionalmente
+# No se puede permutar
+# No se puede usar argumento por clave valor suma_pos(a=2,b=26)
 def suma_pos(a, b, /):
+    """ Calcula la suma de los numeros a y b
+
+    :params a: float - El elemento a de la suma
+    :params a: float - El elemento b de la suma
+    :return float: Resultado de la suma de a + b 
+    """
     return a + b
 
 if __name__ == '__main__':
@@ -65,13 +75,21 @@ if __name__ == '__main__':
     print("Otros casos")
     print(f"division(3, 45): {division(3,45)}")
     print(f"division(300, 3): {division(300, 3)}")
+    time.sleep(2)
     print("\n\033[3mAl usar los nombres en la llamada se pueden permutar los argumentos\033[0m")
     print(f"division(deno= 3, num=45): {division(deno= 3, num=45)}")
     print(f"division(deno= 300, num=3): {division(deno= 300, num=3)}")
 
-    print("\nSuma:")
+    time.sleep(2)
+    print("\nSuma - suma_pos(a, b, /):\n---------------------------------------------")
     print("a:")
     a = float(input())
     print("b:")
     b = float(input())
     print(suma_pos(a, b))
+    print("\n\033[3mPor el caracter '/' en la def. de la f(x) no se puede permutar\nSe debe usar en estrictor orden\033[0m")
+    print(f"suma_pos(20,8): {suma_pos(20,8)}")
+    print("\033[3m A continuacion el error \033[0m")
+    time.sleep(2)
+    print(f"suma_pos(b=20,a=8): {suma_pos(b=20,a=8)}")
+
