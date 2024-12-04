@@ -21,16 +21,26 @@ def iniciales(cadena, sep=' '):
 
 
 def division(num, deno=1):
-    """ Devuelve la division del num  entre el deno
+    """ Devuelve la división del num  entre el deno
 
     :params num: float - Valor del numerador de la funcion
     :params deno: float - Valor del denominador de la funcion , por defecto 1
-    :return float: Resultado de la division
+    :return float: Resultado de la división
     """
 
     return num / deno
 
-def permu(num:int, veces:float):
+# Al agregar los tipos de datos a la definicion 
+# 1. se considera buena practica 
+# 2. se visualiza otra forma de definir la f(x) 
+def permu(num:int, veces:float) -> float:
+    """ Calcula el producto de un número y una cantidad de veces.
+
+    Parámetros:
+    :params num: int -  El número que se va a multiplicar.
+    :params veces: float - La cantidad de veces con la que se multiplicará el número.
+    :return float- Resultado de multiplicar num por veces.
+    """
     return num * veces
 
 def suma_pos(a, b, /):
