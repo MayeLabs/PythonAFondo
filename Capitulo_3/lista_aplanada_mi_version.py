@@ -17,9 +17,9 @@ if __name__ == '__main__':
     lst = [1,20,[2,[3,4,[5]]]]
     lst_new = []
     aplanar_lista(lst, lst_new)
-    print(lst_new)
+    print(lst_new)   # [1, 20, 2, 3, 4, 5]
 
     case_2 = [1,[2,3,4,5],[1,[23,[34]],[62]]]
     lst_c2 = []
     aplanar_lista(case_2, lst_c2)
-    print(lst_c2)
+    print(lst_c2)   # [1, 2, 3, 4, 5, 1, 23, 34, 62]
