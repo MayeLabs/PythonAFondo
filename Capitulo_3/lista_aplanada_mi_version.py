@@ -6,13 +6,10 @@ def aplanar_lista(lst, lst_new):
     elem = lst.pop(0)
     print(elem)
 
-    if isinstance(elem, list):
-        if len(elem) == 1:
-            lst_new.append(elem[0])
-        else:
-            aplanar_lista(elem, lst_new)
-    else:
+    if isinstance(elem, int):
         lst_new.append(elem)
+    else:
+        aplanar_lista(elem, lst_new)
         
     if len(lst) > 0:
         aplanar_lista(lst, lst_new)
