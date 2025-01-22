@@ -6,7 +6,7 @@
 
 - [Memoizacio](#memoizacion)
 - [Decoradores](#decoradores)
-
+- [Funciones Generadoras](#funciones-generadoras)
 
 # Capitulo III
 
@@ -61,6 +61,14 @@ def saludar():
 saludar()
 ```
 
+### *Funciones Generadoras*
 
+> *Generador*  ➙ Objeto que puede producir valor 1 a 1  
+> Tipo especial de iterador  
+> lazy validation que calcula el siguiente cuando se solicita
 
+Son funciones que permiten crear generadores personalizables.
 
+Se usa **yield** en vez de **return**
+
+Es un tipo especial porque posee una implementación más eficiente en cuanto a memoria (generan valores sobre la marcha) y rendimiento (almacena valor actual).
